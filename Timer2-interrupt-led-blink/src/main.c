@@ -31,7 +31,7 @@ void timerInit()
     // Enable the APB1 clock supplying TIM2.
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
 
-    timer.TIM_Prescaler = 14399;
+    timer.TIM_Prescaler = 1799;
     timer.TIM_Period = 99;
     timer.TIM_ClockDivision = TIM_CKD_DIV1;
     timer.TIM_CounterMode = TIM_CounterMode_Up;
@@ -56,6 +56,7 @@ void timerInit()
 }
 
 int main(void) {
+    RCC->CFGR0 |= RCC_HPRE_DIV8; // from 144MHz to 18MHz ( /8 )
     timerInit();
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
     GPIO_InitTypeDef GPIO_InitStructure = {0};
