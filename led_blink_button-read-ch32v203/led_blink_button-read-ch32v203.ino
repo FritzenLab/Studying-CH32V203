@@ -7,7 +7,7 @@ So it alternates between OFF and blinking.
 #define BUTTON PC14
 
 unsigned long ledTimer = 0;
-uint16_t ledTime = 100;
+uint16_t ledTime = 500;
 uint8_t ledControl = 0;
 bool buttonStatus = true;
 bool previousState = false;

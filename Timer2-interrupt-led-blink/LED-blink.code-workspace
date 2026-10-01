@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../PlatformIO/Projects/LED-blink"
+		},
+		{
+			"name": "Timer2-interrupt-led-blink",
+			"path": "../../PlatformIO/Projects/Timer2-interrupt-led-blink"
+		}
+	],
+	"settings": {}
+}
